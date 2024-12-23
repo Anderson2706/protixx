@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #2222;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 80px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 60px);
+        }
+
+        .logo-main {
+            max-width: 80px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .signup {
+            background-color:  #ff5722;
+            color: #fff;
+        }
+
+        .login {
+            background-color: #008CBA;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Logo.png" alt="Logo" class="logo">
+</header>
+
+<div class="container">
+    <img src="Logo.png" alt="Logo Principal" class="logo-main">
+    <h1>Seja Bem-vindo!</h1>
+    <div class="buttons">
+        <button class="signup" onclick="window.location.href='cadastro.html'">Criar Conta</button>
+        <button class="login" onclick="window.location.href='login.html'">Fazer Login</button>
+    </div>
+</div>
+
+</body>
+</html>

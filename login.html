@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5722; /* Cor laranja */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #FF8800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="formLogin">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+<script>
+        // Função para redirecionar para a página início.html
+    function voltarParaInicio() {
+        window.location.href = "cadastro.html";
+    }
+    document.getElementById('formLogin').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const emailInput = document.getElementById('email').value;
+        const senhaInput = document.getElementById('senha').value;
+
+        const emailCadastrado = localStorage.getItem('email');
+        const senhaCadastrada = localStorage.getItem('senha');
+
+        if (emailInput === emailCadastrado && senhaInput === senhaCadastrada) {
+            alert("Login bem-sucedido! Redirecionando...");
+            window.location.href = "site.html"; // Redireciona para site.html
+        } else {
+            alert("Email ou senha incorretos. Tente novamente.");
+        }
+    });
+</script>
+
+</body>
+</html>
